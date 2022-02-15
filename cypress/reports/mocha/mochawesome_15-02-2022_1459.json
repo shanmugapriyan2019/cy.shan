@@ -1,0 +1,127 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 2,
+    "passes": 2,
+    "pending": 0,
+    "failures": 0,
+    "start": "2022-02-15T09:27:31.938Z",
+    "end": "2022-02-15T09:29:49.873Z",
+    "duration": 137935,
+    "testsRegistered": 2,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "6742f88b-8ea6-4442-a773-c478d989f1f1",
+      "title": "",
+      "fullFile": "cypress/integration/Test.spec.js",
+      "file": "cypress/integration/Test.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "808b7581-bcf1-4e60-b91a-6f13cd484587",
+          "title": "Sandbox",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Cash credited",
+              "fullTitle": "Sandbox Cash credited",
+              "timedOut": null,
+              "duration": 62695,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('/');\ncy.xpath(\"//button[contains(@class,'selfServiceContactSupport')]\").click();\ncy.xpath(\"//input[@name='Subject']\", {\n  timeout: 50000\n}).type(sandbox.subject);\ncy.xpath(\"//textarea[@name='Description']\", {\n  timeout: 50000\n}).type(sandbox.description);\ncy.xpath(\"//input[@name='SuppliedEmail']\", {\n  timeout: 50000\n}).type(sandbox.emailid);\ncy.xpath(\"//button[contains(@class,'contactSupportButton')]\", {\n  timeout: 50000\n}).click();\ncy.xpath(\"//div[contains(@class,'forceCommunityContactSupportConfirmation')]/h1\").should('have.text', sandbox.casecreated);",
+              "err": {},
+              "uuid": "43805600-8115-4c67-a553-f42ed5900276",
+              "parentUUID": "808b7581-bcf1-4e60-b91a-6f13cd484587",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Search item",
+              "fullTitle": "Sandbox Search item",
+              "timedOut": null,
+              "duration": 74670,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('/');\ncy.xpath(\"//div[@class='cSearchPublisher']\", {\n  timeout: 50000\n}).type(sandbox.searchitem);\ncy.xpath(\"//div[@class='cSearchPublisher']\", {\n  timeout: 50000\n}).click().trigger('mouseover');\ncy.xpath(\"//div[@class='option-text slds-truncate']//span[@class='all suggestion suggestionText searchOption uiOutputText']\", {\n  timeout: 50000\n}).should('be.visible');\ncy.xpath(\"//div[@class='option-text slds-truncate']//span[@class='all suggestion suggestionText searchOption uiOutputText']\", {\n  timeout: 500000\n}).click();\ncy.xpath(\"//a[text()='Articles']\", {\n  timeout: 500000\n}).click();\ncy.xpath(\"//a[contains(@href,'Los-Angeles-Rams')]\", {\n  timeout: 500000\n}).click({\n  force: true\n});\ncy.xpath(\"//div[@class='detail slds-text-align--center']\", {\n  timeout: 50000\n}).should(\"have.text\", sandbox.popup);\ncy.xpath(\"//button[@title='Close this window']\").should('be.visible').click();\ncy.xpath(\"//div[@class='article-column zoom slds-text-longform selfServiceArticleLayout']\", {\n  timeout: 50000\n}).should('be.visible');\ncy.xpath(\"//div[contains(@class,'slds-form-element')]/../../..//span[text()='Article Number']\", {\n  timeout: 50000\n}).should('be.visible');\ncy.xpath(\"//div[contains(@class,'slds-form-element')]/../../..//span[text()='Article Number']/../..//div[@class='slds-form-element__control slds-grid itemBody']\", {\n  timeout: 50000\n}).then(function ($number) {\n  let ArticleNumber = $number.text();\n  cy.log('my ArticleNumber is', ArticleNumber);\n});",
+              "err": {},
+              "uuid": "71d9e0e5-7499-4655-b5b9-f70e789cb647",
+              "parentUUID": "808b7581-bcf1-4e60-b91a-6f13cd484587",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "43805600-8115-4c67-a553-f42ed5900276",
+            "71d9e0e5-7499-4655-b5b9-f70e789cb647"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 137365,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false
+      },
+      "version": "4.1.0"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "reportDir": "cypress/reports/mocha",
+        "quite": false,
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "inlineAssets": false,
+        "timestamp": "dd-mm-yyyy_HH:MM"
+      },
+      "version": "4.1.0"
+    }
+  }
+}

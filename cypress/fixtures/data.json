@@ -1,0 +1,10 @@
+{
+  "sandbox": {
+    "searchitem": "Los Angeles Rams",
+    "subject": "Help!",
+    "description": "I'm trying to do X, but I keep getting Z.",
+    "emailid": "test@mctest.com",
+    "casecreated": "Your case was created.",
+    "popup": "This feature is not currently enabled either for this record type or the given user type or org"
+  }
+}

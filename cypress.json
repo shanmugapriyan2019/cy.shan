@@ -1,0 +1,30 @@
+{
+  "watchForFileChanges": false,
+  "chromeWebSecurity": false,
+  "baseUrl": "https://sandbox-cypress.cs43.force.com/s/",
+  "viewportWidth": 1000,
+  "viewportHeight": 660,
+  "trashAssetsBeforeRuns": true,
+  "video": true,
+  "test": [
+  ],
+  "reporter": "cypress-multi-reporters",
+  "reporterOptions": {
+    "reporterEnabled": "mochawesome",
+    "mochawesomeReporterOptions": {
+      "reportDir": "cypress/reports/mocha",
+      "quite": false,
+      "overwrite": false,
+      "html": true,
+      "json": true,
+      "inlineAssets": false,
+      "timestamp": "dd-mm-yyyy_HH:MM"
+    }
+  },
+  "screenshotOnRunFailure": true,
+  "screenshotsFolder": "cypress/reports/mochareports/assets"
+}
+
+
+
+
